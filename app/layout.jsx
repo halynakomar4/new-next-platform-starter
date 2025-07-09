@@ -7,7 +7,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="lofi">
       <head>
@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="w-screen h-screen flex items-center justify-center">
         {children}
 
-        {/* Intelswift Messenger Widget */}
+        {/* Intelswift Messenger */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
