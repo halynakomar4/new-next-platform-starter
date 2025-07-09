@@ -24,42 +24,29 @@ export default function RootLayout() {
                 {/* Інтеграція скриптів */}
 
 
-<script async src="https://stage-widget.intelswift.com/script.js?tenantId=3a30671b-cf91-4b10-8320-3ea4b5a8ad11&botId=6853ca41e5616b2c814251a3&uuid=93cda7bf-2a0f-491a-872b-c3b89f0d1a9e&end=true"></script>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                             window.onload = (event) => {
-    const propsInterval = setInterval(widgetTimer, 1000);
 
-    function widgetTimer() {
-      const tenantId = localStorage.getItem("wws-tenant-id")
-      const botId = localStorage.getItem("wws-bot-id")
-      const uuid = localStorage.getItem("wws-uuid")
-      const host = window.location.hostname
-      const language = navigator.language || navigator.userLanguage; 
-
-      if(
-        (uuid && uuid != "undefined") && 
-        (tenantId && tenantId != "undefined") && 
-        (botId && botId != "undefined") && 
-        (host && host != "undefined")
-      ){
-        clearInterval(propsInterval);
-        document.getElementById("iframeWidgetContainer").contentWindow.postMessage( 
-        {
-          tenantId: tenantId,
-          botId: botId,
-          uuid: uuid,
-          host: host,
-          contact_language: language
-        },"*")
-      }
+<!-- Start Intelswift Messenger -->
+<script>
+	window.__INTELSWIFT_MESSENGER_CONFIG__ = {
+		customer_language: navigator.language || "en"
+	};
+</script>
+<script
+	async
+	src="https://stage-widget.intelswift.com/script.js"
+	data-tenant-id="51910295-9c88-4254-9253-e37ac8275239"
+	data-bot-id="686e1e14424f25c63b1c3527"
+	data-assistant-id="686e1e07424f25c63b1c3510"
+	data-uuid="50bf4e09-c0c8-449d-ad63-577a4c4f833d"
+	data-sandbox="false"
+></script>
+<!-- Intelswift Messenger Authentication -->
+<script>
+  window.addEventListener("message", (event) => {
+    if (event.data?.type === "messengerReady") {
+		const iframe = document.getElementById("iFrameMessenger");
+		iframe?.contentWindow.postMessage({ type: "verifyOrigin", href: window.location.href }, "*");
     }
-  };
-                        `,
-                    }}
-                />
-            </body>
-        </html>
-    );
-}
+  });
+</script>
+<!-- End Intelswift Messenger -->
