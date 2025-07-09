@@ -13,8 +13,13 @@ export default function RootLayout() {
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
       </head>
-      <body className="w-screen h-screen flex items-center justify-center">
-        {children}
+               <body className="w-screen h-screen flex items-center justify-center">
+                {/* Картинка на весь екран */}
+                <img
+                    src="/images/image.jpg"
+                    alt="Full Screen Image"
+                    className="w-full h-full object-cover"
+                />
 
         {/* Intelswift Messenger */}
         <script
