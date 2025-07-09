@@ -24,8 +24,6 @@ export default function RootLayout() {
                 {/* Інтеграція скриптів */}
 
 
-
-//<!-- Start Intelswift Messenger -->
 <script>
 	window.__INTELSWIFT_MESSENGER_CONFIG__ = {
 		customer_language: navigator.language || "en"
@@ -40,7 +38,6 @@ export default function RootLayout() {
 	data-uuid="50bf4e09-c0c8-449d-ad63-577a4c4f833d"
 	data-sandbox="false"
 ></script>
-//<!-- Intelswift Messenger Authentication -->
 <script>
   window.addEventListener("message", (event) => {
     if (event.data?.type === "messengerReady") {
@@ -49,4 +46,4 @@ export default function RootLayout() {
     }
   });
 </script>
-//<!-- End Intelswift Messenger -->
+
