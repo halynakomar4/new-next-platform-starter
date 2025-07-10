@@ -32,11 +32,11 @@ export default function RootLayout() {
           }}
         />
         <script
-          async
+        async
 	src="https://stage-widget.intelswift.com/script.js"
 	data-tenant-id="2a1a042e-bb6f-40a8-bc64-520a7dc2cded"
-	data-bot-id="686fb6abe34c9beb76962b24"
-	data-assistant-id="686faeeee34c9beb7696269c"
+	data-bot-id="686fb91de34c9beb76962ca3"
+	data-assistant-id="686fb913e34c9beb76962c81"
 	data-uuid="4afdf1da-091a-4693-b57e-979a65e06332"
 	data-sandbox="false"
         ></script>
