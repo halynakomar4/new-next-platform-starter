@@ -34,10 +34,10 @@ export default function RootLayout() {
         <script
 	async
 	src="https://stage-widget.intelswift.com/script.js"
-	data-tenant-id="de08ddf6-4e83-4e1f-b880-9d487fb41775"
-	data-bot-id="68b03afca2c55e33d4d85010"
-	data-assistant-id="68b03ac4a2c55e33d4d84ff7"
-	data-uuid="abfe56dc-79af-4f93-861a-a38ae0485f4c"
+	data-tenant-id="4a136529-b746-40a8-a63e-aaa73dba5fab"
+	data-bot-id="68b5b4a456fc624b91b071bf"
+	data-assistant-id="68b5b48c56fc624b91b0719b"
+	data-uuid="bbe0714e-1c33-40bd-9312-24931973b62f"
 	data-sandbox="false"
         ></script>
         <script
