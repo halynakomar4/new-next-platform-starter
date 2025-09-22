@@ -45,8 +45,8 @@ export default function RootLayout() {
             __html: `
               window.addEventListener("message", (event) => {
                 if (event.data?.type === "messengerReady") {
-                  const iframe = document.getElementById("iFrameMessenger");
-                  iframe?.contentWindow.postMessage({ type: "verifyOrigin", href: window.location.href }, "*");
+		const iframe = document.getElementById("iFrameMessenger");
+		iframe?.contentWindow.postMessage({ type: "verifyOrigin", href: window.location.href }, "*");
                 }
               });
             `,
